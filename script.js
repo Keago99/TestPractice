@@ -1,11 +1,11 @@
 
 
-function captialize(string){
-    return toUpperCase(string);
+function captialize(word){
+    return String(word).charAt(0).toUpperCase() + String(word).slice(1);
 }
 
-function reverseString(){
-
+function reverseString(word){
+ return word.split("").reverse().join("");
 }
 
 const calculator = {
@@ -26,4 +26,4 @@ const calculator = {
     },
 }
 
-module.exports = capitalize;
+module.exports = {captialize, reverseString};
