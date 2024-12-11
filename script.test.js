@@ -1,9 +1,13 @@
-const {captialize, reverseString} = require("./script.js");
+const functions = require("./script.js");
 
 test("Capitalizes the input string", () => {
-    expect(captialize("dog")).toBe("Dog");
+    expect(functions.captialize("dog")).toBe("Dog");
 });
 
 test("String reversal", () => {
-    expect(reverseString("hello")).toBe("olleh");
+    expect(functions.reverseString("hello")).toBe("olleh");
+});
+
+test("Calculator addition", () => {
+    expect(functions.calculator.add(1,2)).toBe(3);
 });

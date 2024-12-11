@@ -8,22 +8,22 @@ function reverseString(word){
  return word.split("").reverse().join("");
 }
 
-const calculator = {
-    add: (a,b) =>{
+let calculator = {
+    add(a,b){
         return (a+b);
     },
 
-    subtract: (a,b) =>{
+    subtract(a,b){
         return (a-b);
     },
 
-    divide: (a,b) => {
+    divide(a,b){
         return (a/b);
     },
     
-    multiply: (a,b) => {
+    multiply(a,b){
         return (a*b);
     },
 }
 
-module.exports = {captialize, reverseString};
+module.exports = {captialize, reverseString, calculator};
