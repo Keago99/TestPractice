@@ -1,4 +1,5 @@
 const functions = require("./script.js");
+const cipher = require("./ceasarCipher.js");
 
 test("Capitalizes the input string", () => {
     expect(functions.captialize("dog")).toBe("Dog");
@@ -20,6 +21,10 @@ test("Calculator multiplication", () => {
     expect(functions.calculator.multiply(5,3)).toBe(15);
 });
 
-test("CaesarCipher very basic shift", () => {
-    expect(functions.caesarCipher("AB",1)).toBe("BC");
+test("ceasarCipher", () => {
+    expect(cipher.ceasarCipher("abc!",1)).toBe("bcd!");
+});
+
+test("ceasarCipher advanced", () => {
+    expect(cipher.ceasarCipher("a!b+c.;d",131)).toBe("b!c+d.;e");
 });
